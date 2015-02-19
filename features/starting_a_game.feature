@@ -15,4 +15,3 @@ Feature: Starting the game
     When I press submit
     Then I should stay on the homepage
 
-
