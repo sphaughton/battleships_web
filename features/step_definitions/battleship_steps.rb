@@ -11,7 +11,5 @@ When(/^I press submit$/) do
 end
 
 Then(/^I should be taken to a new page "(.*?)"$/) do |newgame|
-  pending
-end
-
+  visit('/newgame')
 end
