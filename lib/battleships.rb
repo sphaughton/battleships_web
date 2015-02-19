@@ -8,13 +8,9 @@ class BattleShips < Sinatra::Base
     erb :index
   end
 
-  get '/newgame' do
-    @user = params[:name]
+  post '/' do
+    @name = params[:name]
     erb :newgame
-  end
-
-  get '/battleshipstime' do
-    erb :battleshipstime
   end
 
   # start the server if ruby file executed directly

@@ -2,11 +2,16 @@ Given(/^I am on the homepage$/) do
   visit('/')
 end
 
-When(/^I follow "(.*?)"$/) do |newgame|
-  click_link(newgame)
+Then(/^I should see "(.*?)"$/) do |name|
+  fill_in('name', :with => @name)
 end
 
-Then(/^I should see "(.*?)"$/) do |user|
-  fill_in('name', :with => @user)
+When(/^I press submit$/) do
   click_button('submit')
+end
+
+Then(/^I should be taken to a new page "(.*?)"$/) do |newgame|
+  pending
+end
+
 end

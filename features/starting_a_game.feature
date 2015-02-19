@@ -5,5 +5,7 @@ Feature: Starting the game
 
   Scenario: Registering
     Given I am on the homepage
-    When I follow "New Game"
     Then I should see "What's your name?"
+    When I press submit
+    Then I should be taken to a new page "New Game"
+
