@@ -5,7 +5,14 @@ Feature: Starting the game
 
   Scenario: Registering
     Given I am on the homepage
-    Then I should see "What's your name?"
+    And I enter a name into the form
     When I press submit
     Then I should be taken to a new page "New Game"
+
+  Scenario: No input into form
+    Given I am on the homepage
+    And I do not enter a name into the form
+    When I press submit
+    Then I should stay on the homepage
+
 
