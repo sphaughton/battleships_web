@@ -1,9 +1,8 @@
-<p><b>Hello! Welcome to Battleships</b></p>
-<p><b>New Game? Enter your name below:</b></p>
+<H1>BATTLESHIPS</h1>
+<h2>Want to start a New Game? Enter your name below:</h2>
 
-<w% name %>
+<%= @name %>
 <form action="/" method="post">
-  What's your name?
-  <input type="text" name="name">
+  <input type="text" name="player_name">
   <input type="submit" id="submit">
 </form>
